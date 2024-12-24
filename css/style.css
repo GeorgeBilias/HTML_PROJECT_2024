@@ -62,3 +62,33 @@ footer
     display: flex;
     justify-content: center;
 }
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+table a {
+    color: #333;
+    text-decoration: none;
+}
+table a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+#content{
+    text-align: center;
+}
