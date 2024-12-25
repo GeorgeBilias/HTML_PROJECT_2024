@@ -37,6 +37,44 @@ header {
     margin-right: 10px;
 }
 
+#nav-bar {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#nav-bar ul li {
+    display: inline;
+    color: #fff;
+}
+#nav-bar ul li a {
+    display: block;
+    color: white; /* Change text color to white */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+#nav-bar ul li a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+#nav-bar ul li a.active {
+    color: #333;
+}
+
 #content
 {
     display: flex;
@@ -47,6 +85,8 @@ header {
     padding: 0;
     width: 100%;
     height: 100%;
+    text-align: center;
+    margin-bottom: 2%;
 }
 footer
 {
@@ -61,10 +101,6 @@ footer
     align-items: center;
     display: flex;
     justify-content: center;
-}
-
-#content{
-    text-align: center;
 }
 
 #contact {
@@ -95,6 +131,11 @@ footer
 #contact a:hover {
     color: black;
     text-decoration: underline;
+}
+#albums {
+    width: 90%;
+    border-radius: 20px;
+    background-color: #333;
 }
 #albums ul {
     display: flex;
