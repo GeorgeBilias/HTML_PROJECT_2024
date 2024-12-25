@@ -62,33 +62,49 @@ footer
     display: flex;
     justify-content: center;
 }
-table {
+
+#content{
+    text-align: center;
+}
+
+#contact {
     width: 80%;
     border-collapse: collapse;
     margin: 20px 0;
 }
 
-table, th, td {
+#contact, #contact th, #contact td {
     border: 1px solid #333;
 }
 
-th, td {
+#contact th, #contact td {
     padding: 10px;
     text-align: center;
 }
 
-th {
+#contact th {
     background-color: #333;
     color: #fff;
 }
-table a {
+
+#contact a {
     color: #333;
     text-decoration: none;
 }
-table a:hover {
-    color: #000;
+
+#contact a:hover {
+    color: black;
     text-decoration: underline;
 }
-#content{
-    text-align: center;
+#albums ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+#albums li {
+    list-style: none;
 }
