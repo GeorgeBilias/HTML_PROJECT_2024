@@ -104,7 +104,7 @@ footer
 }
 
 #contact {
-    width: 80%;
+    width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
 }
@@ -148,4 +148,34 @@ footer
 
 #albums li {
     list-style: none;
+}
+
+@media (max-width: 700px) {
+    #logo {
+        width: 100px; /* Adjust logo size */
+        height: auto;
+    }
+
+    iframe {
+        width: 100%; /* Adjust iframe width */
+        height: auto;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .table-container {
+        width: 100%;
+        overflow-x: auto; /* Enable horizontal scrolling */
+    }
+
+    table {
+        width: 100%; /* Adjust table width */
+        font-size: smaller; /* Adjust font size */
+        border-collapse: collapse; /* Ensure borders collapse */
+    }
+    td img{
+        height: 40px;
+        width: 40px;
+    }
 }
