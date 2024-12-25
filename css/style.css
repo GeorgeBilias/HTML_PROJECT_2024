@@ -74,11 +74,71 @@ header {
 #nav-bar ul li a.active {
     color: #333;
 }
-#content #artists {
+#content #artists-img {
     border-radius: 20px;
 }
 #content iframe {
     border-radius: 20px;
+}
+#artists-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    background-color: #333;
+    border-radius: 20px;
+    width: 90%;
+    padding: 10px;
+    height: auto;
+    
+}
+
+#artists-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    background-color: #333;
+    border-radius: 20px;
+    width: 90%;
+    padding: 10px;
+    height: auto;
+}
+
+#artists {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#artists tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+#artists tr td {
+    background-color: #333;
+    color: #f0f0f0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 10px;
+    margin: 10px; /* Add margin to create space between items */
+    width: calc(25% - 20px); /* Adjust width to fit 4 items per row with margin */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+#artists tr td img {
+    border-radius: 20px;
+    background-color: #333;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px; /* Add space between image and text */
 }
 
 #content
@@ -154,18 +214,6 @@ footer
 
 #albums li {
     list-style: none;
-}
-
-#artists-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    background-color: #333;
-    border-radius: 20px;
-    width: 90%;
-    padding: 10px;
-    height: auto;
 }
 #shop-container {
     display: flex;
@@ -248,5 +296,8 @@ footer
 
     #shop-categories ul li a {
         width: 100%; /* Make each link take full width */
+    }
+    #artists tr td {
+        width: calc(50% - 20px); /* Adjust width to fit 2 items per row on smaller screens */
     }
 }
