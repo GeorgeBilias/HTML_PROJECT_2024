@@ -74,6 +74,12 @@ header {
 #nav-bar ul li a.active {
     color: #333;
 }
+#content #artists {
+    border-radius: 20px;
+}
+#content iframe {
+    border-radius: 20px;
+}
 
 #content
 {
