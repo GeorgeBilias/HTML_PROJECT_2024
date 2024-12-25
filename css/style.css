@@ -161,6 +161,47 @@ footer
     padding: 10px;
     height: auto;
 }
+#shop-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    background-color: #333;
+    border-radius: 20px;
+    width: 90%;
+    padding: 10px;
+    height: auto;
+    color: #f0f0f0;
+    margin-top: 2%;
+}
+
+#shop-categories ul {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+
+#shop-categories ul li {
+    display: inline;
+}
+
+#shop-categories ul li a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#shop-categories ul li a:hover {
+    background-color: #575757;
+}
 
 @media (max-width: 700px) {
     #logo {
@@ -189,5 +230,17 @@ footer
     td img{
         height: 40px;
         width: 40px;
+    }
+    #shop-categories ul {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center;
+    }
+
+    #shop-categories ul li {
+        width: 100%; /* Make each item take full width */
+    }
+
+    #shop-categories ul li a {
+        width: 100%; /* Make each link take full width */
     }
 }
