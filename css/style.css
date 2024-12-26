@@ -282,6 +282,51 @@ footer
     background-color: #575757;
 }
 
+#shop-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 20px;
+    width: 90%;
+    padding: 10px;
+    height: auto;
+    color: #f0f0f0;
+    margin-top: 20px; /* Add margin to create space from other elements */
+    border: 2px solid #575757; /* Add border to the shop container */
+}
+
+#shop-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#shop-table th, #shop-table td {
+    border: 1px solid #575757; /* Add border to table cells */
+    padding: 10px;
+    text-align: center;
+}
+
+#shop-table th {
+    background-color: #333;
+    color: #fff;
+}
+
+#shop-table td img {
+    width: 150px; /* Set fixed width for images */
+    height: 150px; /* Set fixed height for images */
+   
+    border-radius: 10px; /* Add border radius to images */
+}
+#shop-table td a {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+#shop-table td a:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
 @media (max-width: 700px) {
     #logo {
         width: 100px; /* Adjust logo size */
@@ -292,37 +337,26 @@ footer
         width: 100%; /* Adjust iframe width */
         height: auto;
     }
-    img{
+
+    img {
         width: 100%;
         height: auto;
     }
+
     .table-container {
         width: 100%;
         overflow-x: auto; /* Enable horizontal scrolling */
     }
 
-    table {
-        width: 100%; /* Adjust table width */
-        font-size: smaller; /* Adjust font size */
-        border-collapse: collapse; /* Ensure borders collapse */
+    #shop-table td img {
+        width: 80px; /* Adjust image size for smaller screens */
+        height: 80px; /* Adjust image size for smaller screens */
     }
-    td img{
-        height: 40px;
-        width: 40px;
-    }
-    #shop-categories ul {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: center;
-    }
+}
 
-    #shop-categories ul li {
-        width: 100%; /* Make each item take full width */
-    }
-
-    #shop-categories ul li a {
-        width: 100%; /* Make each link take full width */
-    }
-    #artists tr td {
-        width: calc(50% - 20px); /* Adjust width to fit 2 items per row on smaller screens */
+@media (max-width: 400px) {
+    #shop-table td img {
+        width: 60px; /* Adjust image size for very small screens */
+        height: 60px; /* Adjust image size for very small screens */
     }
 }
