@@ -212,9 +212,34 @@ footer
     list-style: none;
 }
 
-#albums li {
+#buy-albums li {
+    list-style: none;
+    width: 20%;
+}
+#buy-albums li img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+#buy-albums {
+    width: 90%;
+    border-radius: 20px;
+    background-color: #333;
+    margin-bottom: 2%;
+}
+#buy-albums ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
     list-style: none;
 }
+
+#buy-albums li {
+    list-style: none;
+}
+
 #shop-container {
     display: flex;
     flex-wrap: wrap;
