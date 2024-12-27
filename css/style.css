@@ -80,6 +80,9 @@ header {
 #content iframe {
     border-radius: 20px;
 }
+#content p{
+    width: 80%;
+}
 #artists-container {
     display: flex;
     flex-wrap: wrap;
