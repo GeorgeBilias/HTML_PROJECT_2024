@@ -34,7 +34,25 @@
         </div>
 
         <div id="content">
-            
+
+            <h1>Jordan Jumpman Jack TR Dark Mocha</h1>
+            <div class="slider">
+                <div class="slides">
+                    <img src="../img/jordan1.png" alt="Jordan 1">
+                    <img src="../img/jordan2.png" alt="Jordan 2">
+                    <img src="../img/jordan3.png" alt="Jordan 3">
+                    <img src="../img/jordan4.png" alt="Jordan 4">
+                    <img src="../img/jordan5.png" alt="Jordan 5">
+                </div>
+                <div class="thumbnails">
+                    <img src="../img/jordan1.png" alt="Jordan 1" onclick="showSlide(0)" class="active">
+                    <img src="../img/jordan2.png" alt="Jordan 2" onclick="showSlide(1)">
+                    <img src="../img/jordan3.png" alt="Jordan 3" onclick="showSlide(2)">
+                    <img src="../img/jordan4.png" alt="Jordan 4" onclick="showSlide(3)">
+                    <img src="../img/jordan5.png" alt="Jordan 5" onclick="showSlide(4)">
+                </div>
+            </div>
+                
         </div>
 
         <footer id="footer">
@@ -42,6 +60,25 @@
         </footer>
         
     </main>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slides img');
+        const thumbnails = document.querySelectorAll('.thumbnails img');
+
+        function showSlide(index) {
+            slides[currentSlide].style.display = 'none';
+            thumbnails[currentSlide].classList.remove('active');
+            currentSlide = index;
+            slides[currentSlide].style.display = 'block';
+            thumbnails[currentSlide].classList.add('active');
+        }
+
+        slides.forEach((slide, index) => {
+            if (index !== currentSlide) {
+                slide.style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
     
