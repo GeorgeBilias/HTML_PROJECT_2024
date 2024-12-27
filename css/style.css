@@ -331,8 +331,9 @@ footer
     display: flex;
     overflow: hidden;
     position: relative;
-    width: 50%;
+    width: 80%;
     margin: auto;
+    justify-content: center;
 }
 
 .slides img {
@@ -363,6 +364,12 @@ footer
 .thumbnails img.active {
     border: 2px solid #333;
 }
+.description {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 2%;
+}
 
 @media (max-width: 700px) {
     #logo {
@@ -387,6 +394,9 @@ footer
     #artists tr td {
         width: calc(50% - 20px); /* Adjust width to fit 2 items per row on smaller screens */
     }
+    .description p{
+        font-size: 14px;
+    }
 
 }
 
@@ -394,5 +404,8 @@ footer
     #shop-table td img {
         width: 60px; /* Adjust image size for very small screens */
         height: 60px; /* Adjust image size for very small screens */
+    }
+    .description p{
+        font-size: 12px;
     }
 }
