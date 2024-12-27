@@ -384,6 +384,9 @@ footer
         width: 100%;
         overflow-x: auto; /* Enable horizontal scrolling */
     }
+    #artists tr td {
+        width: calc(50% - 20px); /* Adjust width to fit 2 items per row on smaller screens */
+    }
 
 }
 
