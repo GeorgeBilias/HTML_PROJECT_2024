@@ -373,6 +373,14 @@ footer
     text-align: center;
     margin-top: 2%;
 }
+.pic-table {
+    display: flex;
+    justify-content: center;
+    border-collapse: collapse;
+}
+.pic-table td {
+    border: 2px solid #333;
+}
 
 @media (max-width: 700px) {
     #logo {
