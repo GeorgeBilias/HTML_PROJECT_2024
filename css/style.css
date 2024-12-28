@@ -373,6 +373,13 @@ footer
     text-align: center;
     margin-top: 2%;
 }
+.product-details {
+    gap: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    height: auto;
+    margin-left: 1%;
+}
 .pic-table {
     display: flex;
     justify-content: center;
