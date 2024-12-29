@@ -388,6 +388,36 @@ footer
 .pic-table td {
     border: 2px solid #333;
 }
+.sources {
+    background-color: #f9f9f9; /* Light background color */
+    border: 2px solid black;    /* Black border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the div */
+    margin: 20px auto; /* Center the div and add vertical margin */
+    width: 80%; /* Adjust the width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center the text */
+}
+
+.sources ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.sources li {
+    margin: 10px 0; /* Space between list items */
+}
+
+.sources a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Black text color */
+    font-weight: bold; /* Bold text for links */
+}
+
+.sources a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #333; /* Darker text color on hover */
+}
 
 @media (max-width: 700px) {
     #logo {
