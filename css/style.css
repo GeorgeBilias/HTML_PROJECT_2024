@@ -418,6 +418,48 @@ footer
     text-decoration: underline; /* Underline on hover */
     color: #333; /* Darker text color on hover */
 }
+.purchase-links{
+   text-align: center;
+}
+.purchase-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+.purchase-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.purchase-links-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+.purchase-links-list li {
+    list-style: none;
+    border: black 2px solid;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #333;
+}
+.purchase-links-list li a {
+    text-decoration: none;
+    color: white;
+}
+.purchase-links-list li a:hover {
+    text-decoration: underline;
+    color: #575757;
+}
+.purchase-links ul :nth-child(4){
+    order: 1;
+}
 
 @media (max-width: 700px) {
     #logo {
