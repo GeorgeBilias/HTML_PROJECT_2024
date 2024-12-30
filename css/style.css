@@ -499,3 +499,22 @@ footer
         font-size: 12px;
     }
 }
+
+.bg-change-btn {
+    background-color: black; /* Black background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline-block */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px; /* Some margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.bg-change-btn:hover {
+    background-color: #333 /* Darker background on hover */
+}
