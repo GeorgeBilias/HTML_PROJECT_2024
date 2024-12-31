@@ -19,15 +19,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Set the flag in localStorage to indicate the greeting has been shown
     sessionStorage.setItem('greetingShown', 'true');
 }
-
-    // Dynamically create the mailto link
-const emailCell = document.getElementById('email-cell');
-const email = emailCell.textContent;
-//display the email to the console
-console.log(email);
-emailCell.innerHTML = `<a href="mailto:${email}">${email}</a>`;
 });
-
 // Function to change the background color of the paragraph
 function changeBackgroundColor() {
     const content = document.getElementById('content');
@@ -43,6 +35,10 @@ function changeBackgroundColor() {
         paragraph.style.padding = "10px"; // Add some padding to the paragraph
         paragraph.style.borderRadius = "5px"; // Add rounded corners
     }
+}
+
+function sendEmail(email) {
+    window.location.href = `mailto:${email}`;
 }
 
 
