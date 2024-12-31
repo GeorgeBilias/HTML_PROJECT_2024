@@ -43,32 +43,32 @@ function sendEmail(email) {
 
 const questions = [
     {
-        question: "Ποιος είναι ο ιδρυτής της Hip-Hop;",
+        question: "1. Ποιος είναι ο ιδρυτής της Hip-Hop;",
         choices: ["DJ Kool Herc", "Grandmaster Flash", "Afrika Bambaataa", "Run-D.M.C."],
         correctAnswer: 0
     },
     {
-        question: "Ποιο είναι το πρώτο Hip-Hop τραγούδι που έγινε επιτυχία;",
+        question: "2. Ποιο είναι το πρώτο Hip-Hop τραγούδι που έγινε επιτυχία;",
         choices: ["Rapper's Delight", "The Message", "Planet Rock", "Walk This Way"],
         correctAnswer: 0
     },
     {
-        question: "Ποια χρονιά ξεκίνησε η Hip-Hop κουλτούρα;",
+        question: "3. Ποια χρονιά ξεκίνησε η Hip-Hop κουλτούρα;",
         choices: ["1973", "1980", "1985", "1990"],
         correctAnswer: 0
     },
     {
-        question: "Ποιο είναι το πιο διάσημο Hip-Hop συγκρότημα;",
+        question: "4. Ποιο είναι το πιο διάσημο Hip-Hop συγκρότημα;",
         choices: ["N.W.A", "Public Enemy", "Run-D.M.C.", "Wu-Tang Clan"],
         correctAnswer: 2
     },
     {
-        question: "Ποιος είναι ο πιο διάσημος Hip-Hop καλλιτέχνης;",
+        question: "5. Ποιος είναι ο πιο διάσημος Hip-Hop καλλιτέχνης;",
         choices: ["Tupac Shakur", "The Notorious B.I.G.", "Jay-Z", "Eminem"],
         correctAnswer: 3
     },
     {
-        question: "Ποιο είναι το πιο διάσημο Hip-Hop άλμπουμ;",
+        question: "6. Ποιο είναι το πιο διάσημο Hip-Hop άλμπουμ;",
         choices: ["Illmatic", "The Chronic", "Ready to Die", "The Marshall Mathers LP"],
         correctAnswer: 0
     }
@@ -91,6 +91,7 @@ function startQuiz() {
 }
 
 function displayQuestion() {
+    document.getElementById('insert-username').style.display = 'none';
     const questionElement = document.getElementById('question');
     const choicesElement = document.getElementById('choices');
     const currentQuestion = questions[currentQuestionIndex];
@@ -100,6 +101,7 @@ function displayQuestion() {
 
     currentQuestion.choices.forEach((choice, index) => {
         const choiceElement = document.createElement('div');
+        choiceElement.classList.add('choice');
         choiceElement.innerHTML = `<input type="radio" name="choice" value="${index}"> ${choice}`;
         choicesElement.appendChild(choiceElement);
     });
