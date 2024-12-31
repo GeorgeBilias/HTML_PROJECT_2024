@@ -19,7 +19,6 @@ main
     width: 100%;
     justify-content: space-between;
 }
-
 header {
     background-color: black;
     color: #fff;
@@ -27,24 +26,20 @@ header {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
-
 .header-content {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .header-content img {
     margin-right: 10px;
 }
-
 #nav-bar {
     background-color: black;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-
 #nav-bar ul {
     list-style-type: none;
     margin: 0;
@@ -54,7 +49,6 @@ header {
     flex-wrap: wrap;
     justify-content: center;
 }
-
 #nav-bar ul li {
     display: inline;
     color: #fff;
@@ -66,12 +60,10 @@ header {
     padding: 14px 20px;
     text-decoration: none;
 }
-
 #nav-bar ul li a:hover {
     background-color: #575757;
     border-radius: 4px;
 }
-
 #nav-bar ul li a.active {
     color: #333;
 }
@@ -94,9 +86,7 @@ header {
     width: 90%;
     padding: 10px;
     height: auto;
-    
 }
-
 #artists-container {
     display: flex;
     flex-wrap: wrap;
@@ -108,7 +98,6 @@ header {
     padding: 10px;
     height: auto;
 }
-
 #artists {
     width: 100%;
     display: flex;
@@ -116,35 +105,31 @@ header {
     justify-content: center;
     gap: 10px;
 }
-
 #artists tr {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
 }
-
 #artists tr td {
     background-color: #333;
     color: #f0f0f0;
     border-radius: 20px;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column; 
+    align-items: center; 
     padding: 10px;
-    margin: 10px; /* Add margin to create space between items */
-    width: calc(25% - 20px); /* Adjust width to fit 4 items per row with margin */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin: 10px; 
+    width: calc(25% - 20px); 
+    box-sizing: border-box; 
 }
-
 #artists tr td img {
     border-radius: 20px;
     background-color: #333;
     width: 100px;
     height: 100px;
-    margin-bottom: 10px; /* Add space between image and text */
+    margin-bottom: 10px; 
 }
-
 #content
 {
     display: flex;
@@ -172,32 +157,26 @@ footer
     display: flex;
     justify-content: center;
 }
-
 #contact {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
 }
-
 #contact, #contact th, #contact td {
     border: 1px solid #333;
 }
-
 #contact th, #contact td {
     padding: 10px;
     text-align: center;
 }
-
 #contact th {
     background-color: #333;
     color: #fff;
 }
-
 #contact a {
     color: #333;
     text-decoration: none;
 }
-
 #contact a:hover {
     color: black;
     text-decoration: underline;
@@ -215,7 +194,6 @@ footer
     padding: 0;
     list-style: none;
 }
-
 #buy-albums li {
     list-style: none;
     width: 20%;
@@ -239,11 +217,9 @@ footer
     padding: 0;
     list-style: none;
 }
-
 #buy-albums li {
     list-style: none;
 }
-
 #shop-container {
     display: flex;
     flex-wrap: wrap;
@@ -257,21 +233,18 @@ footer
     color: #f0f0f0;
     margin-top: 2%;
 }
-
 #shop-categories ul {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping */
+    flex-wrap: wrap; 
     justify-content: center;
     list-style-type: none;
     padding: 0;
     margin: 0;
     gap: 10px;
 }
-
 #shop-categories ul li {
     display: inline;
 }
-
 #shop-categories ul li a {
     display: block;
     padding: 10px 20px;
@@ -281,11 +254,9 @@ footer
     border-radius: 4px;
     text-align: center;
 }
-
 #shop-categories ul li a:hover {
     background-color: #575757;
 }
-
 #shop-container {
     display: flex;
     flex-wrap: wrap;
@@ -296,31 +267,26 @@ footer
     padding: 10px;
     height: auto;
     color: #f0f0f0;
-    margin-top: 20px; /* Add margin to create space from other elements */
-    border: 2px solid #575757; /* Add border to the shop container */
+    margin-top: 20px; 
+    border: 2px solid #575757; 
 }
-
 #shop-table {
     width: 100%;
     border-collapse: collapse;
 }
-
 #shop-table th, #shop-table td {
-    border: 1px solid #575757; /* Add border to table cells */
+    border: 1px solid #575757; 
     padding: 10px;
     text-align: center;
 }
-
 #shop-table th {
     background-color: #333;
     color: #fff;
 }
-
 #shop-table td img {
-    width: 150px; /* Set fixed width for images */
-    height: 150px; /* Set fixed height for images */
-   
-    border-radius: 10px; /* Add border radius to images */
+    width: 150px; 
+    height: 150px; 
+    border-radius: 10px; 
 }
 #shop-table td a {
     color: #f0f0f0;
@@ -330,7 +296,6 @@ footer
     color: gray;
     text-decoration: underline;
 }
-
 .slides {
     display: flex;
     overflow: hidden;
@@ -339,32 +304,28 @@ footer
     margin: auto;
     justify-content: center;
 }
-
 .slides img {
     max-width: 400px;
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
-
 .thumbnails {
-    display: flex; /* Enable flexbox */
-    flex-wrap: wrap; /* Allow wrapping */
-    justify-content: center; /* Center thumbnails horizontally */
-    width: 100%; /* Adjust thumbnail width based on viewport width */
-    height: auto; /* Maintain aspect ratio */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    width: 100%; 
+    height: auto; 
 }
-
 .thumbnails img {
-    flex: 1 1 100px; /* Allow thumbnails to shrink and grow */
-    max-width: 80px; /* Ensure thumbnails do not exceed 100px */
+    flex: 1 1 100px; 
+    max-width: 80px; 
     height: auto;
     margin: 0 5px;
     margin-top: 2%;
     cursor: pointer;
     border-radius: 10px;
 }
-
 .thumbnails img.active {
     border: 2px solid #333;
 }
@@ -390,34 +351,30 @@ footer
     border: 2px solid #333;
 }
 .sources {
-    background-color: #f9f9f9; /* Light background color */
-    border: 2px solid black;    /* Black border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Padding inside the div */
-    margin: 20px auto; /* Center the div and add vertical margin */
-    width: 80%; /* Adjust the width as needed */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    text-align: center; /* Center the text */
+    background-color: #f9f9f9; 
+    border: 2px solid black;    
+    border-radius: 10px; 
+    padding: 20px; 
+    margin: 20px auto; 
+    width: 80%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
 }
-
 .sources ul {
-    list-style-type: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
+    list-style-type: none; 
+    padding: 0; 
 }
-
 .sources li {
-    margin: 10px 0; /* Space between list items */
+    margin: 10px 0;
 }
-
 .sources a {
-    text-decoration: none; /* Remove underline from links */
-    color: black; /* Black text color */
-    font-weight: bold; /* Bold text for links */
+    text-decoration: none; 
+    color: black; 
+    font-weight: bold; 
 }
-
 .sources a:hover {
-    text-decoration: underline; /* Underline on hover */
-    color: #333; /* Darker text color on hover */
+    text-decoration: underline; 
+    color: #333; 
 }
 .purchase-links{
    text-align: center;
@@ -461,115 +418,107 @@ footer
 .purchase-links ul :nth-child(4){
     order: 1;
 }
-
 @media (max-width: 700px) {
     #logo {
-        width: 100px; /* Adjust logo size */
+        width: 100px; 
         height: auto;
     }
-
     iframe {
-        width: 100%; /* Adjust iframe width */
+        width: 100%; 
         height: auto;
     }
-
     img {
         width: 100%;
         height: auto;
     }
-
     .table-container {
         width: 100%;
-        overflow-x: auto; /* Enable horizontal scrolling */
+        overflow-x: auto; 
     }
     #artists tr td {
-        width: calc(50% - 20px); /* Adjust width to fit 2 items per row on smaller screens */
+        width: calc(50% - 20px); 
     }
     .description p{
         font-size: 14px;
     }
-
 }
-
 @media (max-width: 400px) {
     #shop-table td img {
-        width: 60px; /* Adjust image size for very small screens */
-        height: 60px; /* Adjust image size for very small screens */
+        width: 60px; 
+        height: 60px; 
     }
     .description p{
         font-size: 12px;
     }
 }
-
 .bg-change-btn {
-    background-color: black; /* Black background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 15px 32px; /* Some padding */
-    text-align: center; /* Centered text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Make the button inline-block */
-    font-size: 16px; /* Increase font size */
-    margin: 4px 2px; /* Some margin */
-    cursor: pointer; /* Pointer/hand icon */
-    border-radius: 12px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    background-color: black; 
+    border: none; 
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 12px; 
+    transition: background-color 0.3s ease; 
 }
-
 .bg-change-btn:hover {
-    background-color: #333 /* Darker background on hover */
+    background-color: #333;
 }
 .contact-email {
-    background-color: #333; /* Black background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 15px 32px; /* Some padding */
-    text-align: center; /* Centered text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Make the button inline-block */
-    margin: 4px 2px; /* Some margin */
-    cursor: pointer; /* Pointer/hand icon */
-    border-radius: 12px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    background-color: #333; 
+    border: none; 
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 12px; 
+    transition: background-color 0.3s ease; 
 }
 .contact-email:hover {
-    background-color: #575757; /* Darker background on hover */
+    background-color: #575757; 
 }
 #start-quiz {
-    background-color: #333; /* Black background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 15px 32px; /* Some padding */
-    text-align: center; /* Centered text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Make the button inline-block */
-    margin: 4px 2px; /* Some margin */
-    cursor: pointer; /* Pointer/hand icon */
-    border-radius: 12px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    background-color: #333; 
+    border: none; 
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 12px; 
+    transition: background-color 0.3s ease; 
 }
 #start-quiz:hover {
-    background-color: #575757; /* Darker background on hover */
+    background-color: #575757; 
 }
 #quiz-img {
     border-radius: 20px;
     width: 30%;
 }
 #username {
-    background-color: white; /* White background */
-    border: black 2px solid; /* Black border */
-    color: black; /* Black text */
-    padding: 15px 32px; /* Some padding */
-    font-size: large; /* Larger font size */
-    text-align: center; /* Centered text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Make the button inline-block */
-    margin: 4px 2px; /* Some margin */
-    cursor:text; /* Text cursor */
-    border-radius: 12px; /* Rounded corners */
+    background-color: white;
+    border: black 2px solid; 
+    color: black; 
+    padding: 15px 32px; 
+    font-size: large; 
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block; 
+    margin: 4px 2px; 
+    cursor:text; 
+    border-radius: 12px; 
 }
 #username:hover {
-    background-color: #f9f9f9; /* Lighter background on hover */
+    background-color: #f9f9f9; 
 }
 #quiz {
     background-color: #f9f9f9;
@@ -586,7 +535,6 @@ footer
     font-size: larger;
     font-weight: bold;
 }
-
 #submit-button{
     background-color: #333;
     border: 1px solid black;
