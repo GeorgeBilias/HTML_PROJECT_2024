@@ -568,3 +568,18 @@ footer
     cursor:text; /* Text cursor */
     border-radius: 12px; /* Rounded corners */
 }
+#username:hover {
+    background-color: #f9f9f9; /* Lighter background on hover */
+}
+#quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+}
