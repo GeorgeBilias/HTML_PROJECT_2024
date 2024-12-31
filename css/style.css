@@ -5,6 +5,7 @@ body
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    cursor: default;
 }
 main
 {
@@ -533,4 +534,37 @@ footer
 }
 .contact-email:hover {
     background-color: #575757; /* Darker background on hover */
+}
+#start-quiz {
+    background-color: #333; /* Black background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline-block */
+    margin: 4px 2px; /* Some margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+#start-quiz:hover {
+    background-color: #575757; /* Darker background on hover */
+}
+#quiz-img {
+    border-radius: 20px;
+    width: 30%;
+}
+#username {
+    background-color: white; /* White background */
+    border: black 2px solid; /* Black border */
+    color: black; /* Black text */
+    padding: 15px 32px; /* Some padding */
+    font-size: large; /* Larger font size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline-block */
+    margin: 4px 2px; /* Some margin */
+    cursor:text; /* Text cursor */
+    border-radius: 12px; /* Rounded corners */
 }
