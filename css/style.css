@@ -509,7 +509,7 @@ footer
     border-radius: 20px;
     width: 30%;
 }
-#username {
+#userNameInput {
     background-color: white;
     border: black 2px solid; 
     color: black; 
@@ -522,8 +522,14 @@ footer
     cursor:text; 
     border-radius: 12px; 
 }
-#username:hover {
+#userNameInput:hover {
     background-color: #f9f9f9; 
+}
+#welcomeMessage {
+    text-align: center; 
+    font-size: 20px; 
+    margin-top: 1%; 
+    margin-bottom: 1%;
 }
 #quiz {
     background-color: #f9f9f9;
@@ -549,6 +555,28 @@ footer
     padding: 10px;
 }
 #submit-button:hover{
+    background-color: #575757;
+}
+#submitName{
+    background-color: #333;
+    border: 1px solid black;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 10px;
+}
+#submitName:hover{
+    background-color: #575757;
+}
+#startQuiz{
+    background-color: #333;
+    border: 1px solid black;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 10px;
+}
+#startQuiz:hover{
     background-color: #575757;
 }
 #choices{
