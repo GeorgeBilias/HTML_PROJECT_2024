@@ -1,127 +1,132 @@
+/* initialize the body */
 body
 {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    cursor: default;
+    display: flex; /* Make the body a flex container */
+    margin: 0; /* set margin to 0 */
+    padding: 0; /* set body to 0 */
+    font-family: Arial, sans-serif; /* Use Arial font */
+    background-color: #f0f0f0; /* Set a background color */
+    cursor: default; /* set cursor as default */
 }
+/* edit the main */
 main
 {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    justify-content: space-between;
+    background-color: #f0f0f0; /* Set a white background color */
+    font-family: Arial, sans-serif; /* Use Arial font */
+    margin: 0; /* set margin to 0 */
+    padding: 0; /* set padding to 0 */
+    display: flex; /* Make the main a flex container */
+    flex-direction: column; /* Set the flex direction to column */
+    height: 100%; /* Set the height to 100% */
+    width: 100%; /* Set the width to 100% */
+    justify-content: space-between; /* Set the justify content to space between */
 }
+/* edit the header */
 header {
-    background-color: black;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    background-color: black; /* Set the background color to black */
+    color: #fff; /* Set the text color to white */
+    padding: 10px; /* Set the padding to 10px */
+    text-align: center; /* aling the text to the center */
+    font-family: 'Courier New', Courier, monospace; /* Use the Courier New font */
 }
+/* edit the header-content */
 .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Make the header-content a flex container */
+    align-items: center; /* Align the items to the center */
+    justify-content: center; /* Set the content to the center */
 }
 .header-content img {
-    margin-right: 10px;
+    margin-right: 10px; /* Shift a bit more to the right the image on the header */
 }
+/* edit the nav-bar */
 #nav-bar {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    background-color: black; /* Set the background color to black */
+    display: flex; /* Make the nav-bar a flex container */
+    justify-content: center; /* Set the content to the center */
+    flex-wrap: wrap; /* Wrap the content to help with smaller devices */
 }
+/* edit the nav-bar ul */
 #nav-bar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
+    list-style-type: none; /* Remove the list style */
+    margin: 0; /* Set the margin to 0 */
+    padding: 0; /* Set the padding to 0 */
+    display: flex; /* Make the nav-bar ul a flex container */
+    margin-bottom: 10px; /* Set the margin bottom to 10px */
+    flex-wrap: wrap; /* Wrap the content to help with smaller devices */
+    justify-content: center; /* Set the content to the center */
 }
 #nav-bar ul li {
-    display: inline;
-    color: #fff;
+    display: inline; /* Display the list items inline */
+    color: #fff; /* Change text color to white */
 }
+/* edit the links in the nav bar*/
 #nav-bar ul li a {
-    display: block;
+    display: block; /* Display the links as block */
     color: white; /* Change text color to white */
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
+    text-align: center; /* Align the text to the center */
+    padding: 14px 20px; /* Set the padding to 14px 20px */
+    text-decoration: none; /* Remove the text decoration */
 }
+/* edit the links in the nav bar when hovered */
 #nav-bar ul li a:hover {
-    background-color: #575757;
-    border-radius: 4px;
+    background-color: #575757; /* Change the background color to a darker grey */
+    border-radius: 4px; /* Set the border radius to 4px */
 }
+/* edit current active html */
 #nav-bar ul li a.active {
-    color: #333;
+    color: #333; /* Change the text color of the link to black */
 }
+/* edit the images of artists */
 #content #artists-img {
-    border-radius: 20px;
+    border-radius: 20px; /* Set the border radius to 20px */
 }
+/* edit the content video */
 #content iframe {
-    border-radius: 20px;
+    border-radius: 20px; /* Set the border radius to 20px */
 }
+/* edit the content paragraphs */
 #content p{
-    width: 80%;
+    width: 80%; /* Set the width to 80% */
 }
+/* edit the container of artists */
 #artists-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    background-color: #333;
-    border-radius: 20px;
-    width: 90%;
-    padding: 10px;
-    height: auto;
+    display: flex; /* Make the artists-container a flex container */
+    flex-wrap: wrap; /* Wrap the content */
+    justify-content: center; /* Set the content to the center */
+    gap: 10px; /* Set the gap to 10px */
+    background-color: #333; /* Set the background color to black */
+    border-radius: 20px; /* Set the border radius to 20px */
+    width: 90%; /* Set the width to 90% */
+    padding: 10px; /* Set the padding to 10px */
+    height: auto; /* Set the height to auto */
 }
-#artists-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    background-color: #333;
-    border-radius: 20px;
-    width: 90%;
-    padding: 10px;
-    height: auto;
-}
+/* edit the artists table */
 #artists {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    width: 100%; /* Set the width to 100% */
+    display: flex; /* Make the artists a flex container */
+    flex-wrap: wrap; /* Wrap the content */
+    justify-content: center; /* Set the content to the center */
+    gap: 10px; /* Set the gap to 10px */
 }
+/* edit the artists table rows */
 #artists tr {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+    display: flex; /* Make the artists a flex container */
+    flex-wrap: wrap; /* Wrap the content */
+    justify-content: center; /* Set the content to the center */
+    width: 100%; /* Set the width to 100% */
 }
+/* edit the artists table data */
 #artists tr td {
-    background-color: #333;
-    color: #f0f0f0;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    padding: 10px;
-    margin: 10px; 
-    width: calc(25% - 20px); 
-    box-sizing: border-box; 
+    background-color: #333; /* Set the background color to black */
+    color: #f0f0f0; /* Set the text color to white */
+    border-radius: 20px; /* Set the border radius to 20px */
+    display: flex; /* Make the artists a flex container */
+    flex-direction: column;  /* Set the flex direction to column */
+    align-items: center;  /* Align the items to the center */
+    padding: 10px; /* Set the padding to 10px */
+    margin: 10px;  /* Set the margin to 10px */
+    width: calc(25% - 20px); /* calculate the width */
+    box-sizing: border-box;  /* Set the box-sizing to border-box */
 }
 #artists tr td img {
     border-radius: 20px;

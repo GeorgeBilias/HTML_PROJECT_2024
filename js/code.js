@@ -1,47 +1,46 @@
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    if (!sessionStorage.getItem('greetingShown')) {
-        const currentDate = new Date();
-        const hours = currentDate.getHours();
-        let greeting;
+document.addEventListener('DOMContentLoaded', (event) => { // Κατα το ανοιγμα του site
+    if (!sessionStorage.getItem('greetingShown')) { // Αν δεν έχει εμφανιστεί το μήνυμα καλωσορίσματος
+        const currentDate = new Date(); // Πάρε την τρέχουσα ημερομηνία
+        const hours = currentDate.getHours(); // Πάρε την τρέχουσα ώρα
+        let greeting; 
 
-    if (hours < 12) {
-        greeting = 'Καλημέρα';
-    } else if (hours < 18) {
-        greeting = 'Καλησπέρα';
+    if (hours < 12) { // Αν η ώρα είναι μικρότερη από 12
+        greeting = 'Καλημέρα'; // Εμφάνισε το καλημέρα
     } else {
-        greeting = 'Καληνύχτα';
+        greeting = 'Καληνύχτα'; // Αλλιώς εμφάνισε το καληνύχτα
     }
 
-    const welcomeMessage = `${greeting}! Σήμερα είναι ${currentDate.toLocaleDateString()}. Καλώς ήρθατε στον ιστότοπό μας. Εδώ θα βρείτε πληροφορίες για την Hip-Hop κουλτούρα.`;
+    const welcomeMessage = `${greeting}! Σήμερα είναι ${currentDate.toLocaleDateString()}. Καλώς ήρθατε στον ιστότοπό μας. Εδώ θα βρείτε πληροφορίες για την Hip-Hop κουλτούρα.`; // Το μήνυμα καλωσορίσματος
 
-    alert(welcomeMessage);
+    alert(welcomeMessage); // Εμφάνισε το μήνυμα καλωσορίσματος
     
-    sessionStorage.setItem('greetingShown', 'true');
+    sessionStorage.setItem('greetingShown', 'true'); // Αποθήκευσε το ότι το μήνυμα καλωσορίσματος έχει εμφανιστεί
 }
 });
 
-function changeBackgroundColor() {
-    const content = document.getElementById('content');
-    const paragraph = content.querySelector('p');
-    if (paragraph.style.backgroundColor === "rgb(51, 51, 51)") { 
-        paragraph.style.backgroundColor = "transparent";
-        paragraph.style.color = "initial";
-        paragraph.style.padding = "initial";
-        paragraph.style.borderRadius = "initial";
-    } else {
-        paragraph.style.backgroundColor = "#333"; 
-        paragraph.style.color = "#fff"; 
-        paragraph.style.padding = "10px"; 
-        paragraph.style.borderRadius = "5px"; 
+function changeBackgroundColor() { // Όταν πατηθεί το κουμπί
+    const content = document.getElementById('content'); // Πάρε το περιεχόμενο
+    const paragraph = content.querySelector('p'); // Πάρε την πρώτο παράγραφο
+    if (paragraph.style.backgroundColor === "rgb(51, 51, 51)") { // Αν το χρώμα του background είναι μαύρο δηλαδή εχει ηδη αλλαχθεί
+        paragraph.style.backgroundColor = "transparent"; // Κάνε το background διαφανές
+        paragraph.style.color = "initial"; // Κάνε το χρώμα του κειμένου το αρχικό
+        paragraph.style.padding = "initial"; // Κάνε το padding το αρχικό
+        paragraph.style.borderRadius = "initial"; // Κάνε το border radius το αρχικό
+        
+    } else { // Αλλιώς αν δεν εχει αλλαγθεί το background
+        paragraph.style.backgroundColor = "#333"; // Κάνε το background μαύρο
+        paragraph.style.color = "#fff"; // Κάνε το χρώμα του κειμένου λευκό
+        paragraph.style.padding = "10px"; // Κάνε το padding 10px
+        paragraph.style.borderRadius = "5px"; // Κάνε το border radius 5px
     }
 }
 
-function sendEmail(email) {
-    window.location.href = `mailto:${email}`;
+function sendEmail(email) { // Όταν πατηθεί το κουμπί για το email
+    window.location.href = `mailto:${email}`; // Ανοίξε το email client για να στειλεις mail
 }
 
-const questions = [
+const questions = [ // Οι ερωτήσεις του quiz
     {
         question: "1. Ποιος είναι ο ιδρυτής της Hip-Hop;",
         choices: ["DJ Kool Herc", "Grandmaster Flash", "Afrika Bambaataa", "Run-D.M.C."],
@@ -78,59 +77,61 @@ let currentQuestionIndex = 0;
 let score = 0;
 let userName = '';
 
-function startQuiz() {
-    userName = document.getElementById('username').value;
-    if (userName === '') {
-        alert('Παρακαλώ εισάγετε το όνομά σας.');
+function startQuiz() { // Όταν πατηθεί το κουμπί για να ξεκινησει το quiz
+
+    userName = document.getElementById('username').value; // Πάρε το όνομα που έχει δωθεί
+
+    if (userName === '') { // Αν δεν έχει δωθεί όνομα
+        alert('Παρακαλώ εισάγετε το όνομά σας.'); // Εμφάνισε μήνυμα
         return;
     }
-    document.getElementById('quiz').style.display = 'block';
-    document.getElementById('start-quiz').style.display = 'none';
-    document.getElementById('username').style.display = 'none';
-    displayQuestion();
+    document.getElementById('quiz').style.display = 'block'; // Εμφάνισε το quiz
+    document.getElementById('start-quiz').style.display = 'none'; // Κρύψε το κουμπί για να ξεκινήσει το quiz
+    document.getElementById('username').style.display = 'none'; // Κρύψε το input για το όνομα
+    displayQuestion(); // Εμφάνισε την πρώτη ερώτηση
 }
 
-function displayQuestion() {
-    document.getElementById('insert-username').style.display = 'none';
-    const questionElement = document.getElementById('question');
-    const choicesElement = document.getElementById('choices');
-    const currentQuestion = questions[currentQuestionIndex];
+function displayQuestion() { // Εμφάνισε την ερώτηση
+    document.getElementById('insert-username').style.display = 'none'; // Κρύψε το input για το όνομα
+    const questionElement = document.getElementById('question'); // Πάρε το element της ερώτησης
+    const choicesElement = document.getElementById('choices'); // Πάρε το element των επιλογών
+    const currentQuestion = questions[currentQuestionIndex]; // Πάρε την τρέχουσα ερώτηση
 
-    questionElement.innerText = currentQuestion.question;
-    choicesElement.innerHTML = '';
+    questionElement.innerText = currentQuestion.question; // Εμφάνισε την ερώτηση
+    choicesElement.innerHTML = ''; // Κάνε κενό τις επιλογές
 
-    currentQuestion.choices.forEach((choice, index) => {
-        const choiceElement = document.createElement('div');
-        choiceElement.classList.add('choice');
-        choiceElement.innerHTML = `<input type="radio" name="choice" value="${index}"> ${choice}`;
-        choicesElement.appendChild(choiceElement);
+    currentQuestion.choices.forEach((choice, index) => { // Για κάθε επιλογή
+        const choiceElement = document.createElement('div'); // Δημιούργησε ένα div
+        choiceElement.classList.add('choice'); // Πρόσθεσε την κλάση choice
+        choiceElement.innerHTML = `<input type="radio" name="choice" value="${index}"> ${choice}`; // Εμφάνισε την επιλογή
+        choicesElement.appendChild(choiceElement); // Πρόσθεσε την επιλογή στο element των επιλογών
     });
 }
 
-function submitAnswer() {
-    const selectedChoice = document.querySelector('input[name="choice"]:checked');
-    if (!selectedChoice) {
-        alert('Παρακαλώ επιλέξτε μια απάντηση.');
+function submitAnswer() { // Όταν πατηθεί το κουμπί για να υποβληθεί η απάντηση
+    const selectedChoice = document.querySelector('input[name="choice"]:checked'); // Πάρε την επιλογή που έχει επιλεγεί
+    if (!selectedChoice) { // Αν δεν έχει επιλεγεί κάποια απάντηση
+        alert('Παρακαλώ επιλέξτε μια απάντηση.'); // Εμφάνισε μήνυμα
         return;
     }
 
-    const answer = parseInt(selectedChoice.value);
-    if (answer === questions[currentQuestionIndex].correctAnswer) {
-        score++;
+    const answer = parseInt(selectedChoice.value); // Πάρε την απάντηση που έχει επιλεγεί
+    if (answer === questions[currentQuestionIndex].correctAnswer) { // Αν η απάντηση είναι σωστή
+        score++; // Αύξησε το σκορ
     }
 
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-        displayQuestion();
+    currentQuestionIndex++; // Πήγαινε στην επόμενη ερώτηση
+    if (currentQuestionIndex < questions.length) { // Αν υπάρχουν ακόμα ερωτήσεις
+        displayQuestion(); // Εμφάνισε την επόμενη ερώτηση
     } else {
-        displayResults();
+        displayResults(); // Εμφάνισε τα αποτελέσματα
     }
 }
 
-function displayResults() {
-    const resultsElement = document.getElementById('results');
-    resultsElement.innerHTML = `<h3>Συγχαρητήρια, ${userName}! Το σκορ σας είναι ${score} από ${questions.length}.</h3>`;
-    document.getElementById('question').style.display = 'none';
-    document.getElementById('choices').style.display = 'none';
-    document.getElementById('submit').style.display = 'none';
+function displayResults() { // Εμφάνισε τα αποτελέσματα
+    const resultsElement = document.getElementById('results'); // Πάρε το element των αποτελεσμάτων
+    resultsElement.innerHTML = `<h3>Συγχαρητήρια, ${userName}! Το σκορ σας είναι ${score} από ${questions.length}.</h3>`; // Εμφάνισε το μήνυμα με το σκορ
+    document.getElementById('question').style.display = 'none'; // Κρύψε την ερώτηση
+    document.getElementById('choices').style.display = 'none'; // Κρύψε τις επιλογές
+    document.getElementById('submit').style.display = 'none'; // Κρύψε το κουμπί για υποβολή απάντησης
 }
