@@ -432,6 +432,7 @@ footer
 .purchase-links ul :nth-child(4){
     order: 1;
 }
+/* Responsive design */
 @media (max-width: 700px) {
     #logo {
         width: 100px; 
@@ -465,6 +466,7 @@ footer
         font-size: 12px;
     }
 }
+/* Quiz CSS */
 .bg-change-btn {
     background-color: black; 
     border: none; 
