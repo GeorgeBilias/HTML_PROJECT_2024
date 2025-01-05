@@ -73,21 +73,36 @@ const questions = [ // Οι ερωτήσεις του quiz
     }
 ];
 
+const userNameInput = '';
+
+function submitName() {
+    const userNameInput = document.getElementById('userNameInput').value;
+    if (userNameInput === '') { // Αν δεν έχει δωθεί όνομα
+        alert('Παρακαλώ εισάγετε το όνομά σας.'); // Εμφάνισε μήνυμα
+        return;
+    }else {
+        document.getElementById('insert-username').style.display = 'none';
+        document.getElementById('welcomeMessage').innerHTML = `Καλώς ήρθες, ${userNameInput}! Πατήστε το κουμπί για να ξεκινήσετε το quiz.`;
+        document.getElementById('welcomeMessage').style.display = 'block';
+        document.getElementById('startQuiz').style.display = 'block';
+        document.getElementById('userNameInput').style.display = 'none';
+        document.getElementById('submitName').style.display = 'none';
+    }
+}
+
 let currentQuestionIndex = 0;
 let score = 0;
 let userName = '';
 
 function startQuiz() { // Όταν πατηθεί το κουμπί για να ξεκινησει το quiz
 
-    userName = document.getElementById('username').value; // Πάρε το όνομα που έχει δωθεί
+    document.getElementById('welcomeMessage').style.display = 'none';
+    document.getElementById('startQuiz').style.display = 'none';
+    document.getElementById('quiz').style.display = 'block';
+    document.getElementById('question').style.display = 'block';
+    document.getElementById('choices').style.display = 'block';
+    document.getElementById('submit').style.display = 'block';
 
-    if (userName === '') { // Αν δεν έχει δωθεί όνομα
-        alert('Παρακαλώ εισάγετε το όνομά σας.'); // Εμφάνισε μήνυμα
-        return;
-    }
-    document.getElementById('quiz').style.display = 'block'; // Εμφάνισε το quiz
-    document.getElementById('start-quiz').style.display = 'none'; // Κρύψε το κουμπί για να ξεκινήσει το quiz
-    document.getElementById('username').style.display = 'none'; // Κρύψε το input για το όνομα
     displayQuestion(); // Εμφάνισε την πρώτη ερώτηση
 }
 

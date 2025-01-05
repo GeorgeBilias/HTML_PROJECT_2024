@@ -44,8 +44,10 @@
             <p>Δοκιμάστε τις γνώσεις σας στο χιπ χοπ με το quiz μας!</p>
             <img src="../img/artists.png" alt="artists" id="quiz-img">
             <p id="insert-username">Παρακαλώ εισάγετε το όνομά σας για να ξεκινήσετε το quiz:</p>
-            <input type="text" id="username" placeholder="Το όνομά σας">
-            <button id="start-quiz" onclick="startQuiz()">ΞΕΚΙΝΗΣΤΕ ΤΟ QUIZ</button>
+            <input type="text" id="userNameInput" placeholder="Το όνομά σας">
+            <button id="submitName" onclick="submitName()">Υποβολή Ονόματος</button>
+            <div id="welcomeMessage"></div>
+            <button id="startQuiz" style="display:none;" onclick="startQuiz()">Ξεκινήστε το Quiz</button>
             <div id="quiz" style="display: none;">
                 <div id="question"></div>
                 <div id="choices"></div>
