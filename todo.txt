@@ -1,0 +1,5 @@
+fix errors in html :
+
+albums
+contact
+product_details
