@@ -1,4 +1,3 @@
 fix errors in html :
 
-albums (issue showed up in site)
 product_details
