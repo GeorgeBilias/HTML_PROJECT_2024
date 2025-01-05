@@ -199,11 +199,6 @@ footer
     padding: 0;
     list-style: none;
 }
-#albums li iframe {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-}
 #buy-albums li {
     list-style: none;
     width: 20%;

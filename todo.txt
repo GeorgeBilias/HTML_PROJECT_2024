@@ -1,5 +1,4 @@
 fix errors in html :
 
-albums
-contact
+albums (issue showed up in site)
 product_details
