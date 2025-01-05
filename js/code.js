@@ -82,7 +82,7 @@ function submitName() {
         return;
     }else {
         document.getElementById('insert-username').style.display = 'none'; // Κρύψε το input για το όνομα
-        document.getElementById('welcomeMessage').innerHTML = `Καλώς ήρθες, ${userNameInput}! Πατήστε το κουμπί για να ξεκινήσετε το quiz.`; // Γραψε το μυνημα καλωσορισματος
+        document.getElementById('welcomeMessage').innerHTML = `Καλώς ήρθες, ${userNameInput}! <br> Πατήστε το κουμπί για να ξεκινήσετε το quiz.`; // Γραψε το μυνημα καλωσορισματος
         document.getElementById('welcomeMessage').style.display = 'block'; // Εμφάνισε το μήνυμα καλωσορίσματος
         document.getElementById('startQuiz').style.display = 'block'; // Εμφάνισε το κουμπί για να ξεκινήσει το quiz
         document.getElementById('userNameInput').style.display = 'none'; // Κρύψε το input για το όνομα
