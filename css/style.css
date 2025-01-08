@@ -464,9 +464,6 @@ footer {
     border-radius: 12px; 
     transition: background-color 0.3s ease; 
 }
-.bg-change-btn:hover {
-    background-color: #333;
-}
 .contact-email {
     background-color: #333; 
     border: none; 
@@ -480,9 +477,6 @@ footer {
     border-radius: 12px; 
     transition: background-color 0.3s ease; 
 }
-.contact-email:hover {
-    background-color: #575757; 
-}
 #start-quiz {
     background-color: #333; 
     border: none; 
@@ -495,9 +489,6 @@ footer {
     cursor: pointer; 
     border-radius: 12px; 
     transition: background-color 0.3s ease; 
-}
-#start-quiz:hover {
-    background-color: #575757; 
 }
 #quiz-img {
     border-radius: 20px;
@@ -548,9 +539,6 @@ footer {
     cursor: pointer;
     padding: 10px;
 }
-#submit-button:hover{
-    background-color: #575757;
-}
 #submitName{
     background-color: #333;
     border: 1px solid black;
@@ -559,7 +547,7 @@ footer {
     cursor: pointer;
     padding: 10px;
 }
-#submitName:hover{
+#submitName:hover,#startQuiz:hover,#submit-button:hover,#start-quiz:hover,.bg-change-btn:hover,.contact-email:hover {
     background-color: #575757;
 }
 #startQuiz{
@@ -569,9 +557,6 @@ footer {
     border-radius: 15px;
     cursor: pointer;
     padding: 10px;
-}
-#startQuiz:hover{
-    background-color: #575757;
 }
 #choices{
     margin-left: 2%;
