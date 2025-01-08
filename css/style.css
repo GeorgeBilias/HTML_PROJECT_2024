@@ -71,6 +71,7 @@ header {
 }
 #content iframe {
     border-radius: 20px; 
+    border: black 2px solid;
 }
 #content p{
     width: 80%; 
