@@ -424,6 +424,17 @@ footer {
     #shop-table tr{
         font-size: small;
     }
+    #contact {
+       font-size: small;
+    }
+    #contact tr a img{
+        width: 20px;
+        height: 20px;
+    }
+    #contact-email {
+        font-size: small;
+        width: 50%;
+    }
 }
 @media (max-width: 400px) {
     #shop-table td img {
