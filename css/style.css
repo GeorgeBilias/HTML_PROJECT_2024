@@ -460,6 +460,9 @@ footer {
         font-size: small;
         width: 50%;
     }
+    #footer p{
+        font-size: small;
+    }
 }
 @media (max-width: 400px) {
     #shop-table td img {
@@ -470,6 +473,12 @@ footer {
         font-size: 12px;
     }
     #shop-table tr{
+        font-size: smaller;
+    }
+    #footer p{
+        font-size: smaller;
+    }
+    #contact th, #contact td {
         font-size: smaller;
     }
 }
