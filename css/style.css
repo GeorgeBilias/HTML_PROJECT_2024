@@ -99,6 +99,7 @@ header {
 }
 #content p{
     width: 80%; 
+    font-size: larger;
 }
 .video-container {
     align-items: center;
