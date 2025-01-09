@@ -42,38 +42,66 @@ function sendEmail(email) { // Όταν πατηθεί το κουμπί για 
 
 const questions = [ // Οι ερωτήσεις του quiz
     {
-        question: "1. Ποιος είναι ο ιδρυτής της Hip-Hop;",
-        choices: ["DJ Kool Herc", "Grandmaster Flash", "Afrika Bambaataa", "Run-D.M.C."],
+        question: "1. Ποιο είναι το πραγματικό όνομα του Travis Scott;",
+        choices: ["Kanye West", "Jacques Webster", "Aubrey Graham", "Jeffery Williams"],
+        correctAnswer: 1
+    },
+    {
+        question: "2. Ποιος καλλιτέχνης είναι γνωστός ως 'Yeezy';",
+        choices: ["Drake", "Kanye West", "Future", "21 Savage"],
+        correctAnswer: 1
+    },
+    {
+        question: "3. Ποιο είναι το πραγματικό όνομα του Drake;",
+        choices: ["Aubrey Graham", "Jacques Webster", "Nayvadius Wilburn", "Shayaa Bin Abraham-Joseph"],
         correctAnswer: 0
     },
     {
-        question: "2. Ποιο είναι το πρώτο Hip-Hop τραγούδι που έγινε επιτυχία;",
-        choices: ["Rapper's Delight", "The Message", "Planet Rock", "Walk This Way"],
-        correctAnswer: 0
-    },
-    {
-        question: "3. Ποια χρονιά ξεκίνησε η Hip-Hop κουλτούρα;",
-        choices: ["1973", "1980", "1985", "1990"],
-        correctAnswer: 0
-    },
-    {
-        question: "4. Ποιο είναι το πιο διάσημο Hip-Hop συγκρότημα;",
-        choices: ["N.W.A", "Public Enemy", "Run-D.M.C.", "Wu-Tang Clan"],
+        question: "4. Ποιος καλλιτέχνης είναι γνωστός για το άλμπουμ 'Astroworld';",
+        choices: ["Kanye West", "Drake", "Travis Scott", "Gunna"],
         correctAnswer: 2
     },
     {
-        question: "5. Ποιος είναι ο πιο διάσημος Hip-Hop καλλιτέχνης;",
-        choices: ["Tupac Shakur", "The Notorious B.I.G.", "Jay-Z", "Eminem"],
+        question: "5. Ποιος καλλιτέχνης είναι γνωστός για το άλμπουμ 'To Pimp a Butterfly';",
+        choices: ["Young Thug", "Lil Baby", "Future", "Kendrick Lamar"],
         correctAnswer: 3
     },
     {
-        question: "6. Ποιο είναι το πιο διάσημο Hip-Hop άλμπουμ;",
-        choices: ["Illmatic", "The Chronic", "Ready to Die", "The Marshall Mathers LP"],
+        question: "6. Ποιος καλλιτέχνης είναι γνωστός για το τραγούδι 'Mask Off';",
+        choices: ["Future", "21 Savage", "Kanye West", "Drake"],
         correctAnswer: 0
+    },
+    {
+        question: "7. Ποιος καλλιτέχνης είναι γνωστός για το άλμπουμ 'My Beautiful Dark Twisted Fantasy';",
+        choices: ["Drake","Kanye West", "Travis Scott", "Future"],
+        correctAnswer: 1
+    },
+    {
+        question: "8. Ποιο είναι το πραγματικό όνομα του Future;",
+        choices: ["Nayvadius Wilburn", "Aubrey Graham", "Jacques Webster", "Shayaa Bin Abraham-Joseph"],
+        correctAnswer: 0
+    },
+    {
+        question: "9. Ποιος καλλιτέχνης είναι γνωστός για το άλμπουμ 'DAMN.';",
+        choices: ["Lil Baby", "Young Thug", "21 Savage","Kendrick Lamar"],
+        correctAnswer: 3
+    },
+    {
+        question: "10. Ποιος καλλιτέχνης είναι γνωστός για το τραγούδι 'Hot';",
+        choices: ["Drake","Kanye West","Gunna", "Travis Scott"],
+        correctAnswer: 2
+    },
+    {
+        question: "11. Ποιο είναι το πραγματικό όνομα του 21 Savage;",
+        choices: ["Shayaa Bin Abraham-Joseph", "Jacques Webster", "Aubrey Graham", "Nayvadius Wilburn"],
+        correctAnswer: 0
+    },
+    {
+        question: "12. Ποιος καλλιτέχνης είναι γνωστός για το άλμπουμ 'Harder Than Ever';",
+        choices: ["Future","Lil Baby", "Young Thug", "21 Savage"],
+        correctAnswer: 1
     }
 ];
-
-const userNameInput = '';
 
 function submitName() {
     const userNameInput = document.getElementById('userNameInput').value; // Πάρε το όνομα που έχει δωθεί
@@ -82,7 +110,7 @@ function submitName() {
         return;
     }else {
         document.getElementById('insert-username').style.display = 'none'; // Κρύψε το input για το όνομα
-        document.getElementById('welcomeMessage').innerHTML = `Καλώς ήρθες, ${userNameInput}! <br> Πατήστε το κουμπί για να ξεκινήσετε το quiz.`; // Γραψε το μυνημα καλωσορισματος
+        document.getElementById('welcomeMessage').innerHTML = `Καλώς ήρθες, ${userNameInput}! <br> Πάτησε το κουμπί για να ξεκινήσεις το quiz.`; // Γραψε το μυνημα καλωσορισματος
         document.getElementById('welcomeMessage').style.display = 'block'; // Εμφάνισε το μήνυμα καλωσορίσματος
         document.getElementById('startQuiz').style.display = 'block'; // Εμφάνισε το κουμπί για να ξεκινήσει το quiz
         document.getElementById('userNameInput').style.display = 'none'; // Κρύψε το input για το όνομα
@@ -92,7 +120,6 @@ function submitName() {
 
 let currentQuestionIndex = 0;
 let score = 0;
-let userName = '';
 
 function startQuiz() { // Όταν πατηθεί το κουμπί για να ξεκινησει το quiz
 
@@ -145,7 +172,14 @@ function submitAnswer() { // Όταν πατηθεί το κουμπί για ν
 
 function displayResults() { // Εμφάνισε τα αποτελέσματα
     const resultsElement = document.getElementById('results'); // Πάρε το element των αποτελεσμάτων
-    resultsElement.innerHTML = `<h3>Συγχαρητήρια, ${userName}! Το σκορ σας είναι ${score} από ${questions.length}.</h3>`; // Εμφάνισε το μήνυμα με το σκορ
+    const userNameInput = document.getElementById('userNameInput').value; // Πάρε το όνομα που έχει δωθεί
+    if (score === 0) { // Αν το σκορ είναι 0
+        resultsElement.innerHTML = `<h3>Λυπάμαι, ${userNameInput}.<br> Δεν απάντησες σωστά σε καμία ερώτηση.</h3>`; // Εμφάνισε το μήνυμα
+    }else if (score === questions.length) { // Αν το σκορ είναι ίσο με το πλήθος των ερωτήσεων
+        resultsElement.innerHTML = `<h3>Συγχαρητήρια, ${userNameInput}!<br> Απάντησες σωστά σε όλες τις ερωτήσεις!</h3>`; // Εμφάνισε το μήνυμα
+    } else {
+        resultsElement.innerHTML = `<h3>Συγχαρητήρια, ${userNameInput}!<br> Το σκορ σου είναι ${score}/${questions.length}.</h3>`; // Εμφάνισε το μήνυμα με το σκορ
+    }
     document.getElementById('question').style.display = 'none'; // Κρύψε την ερώτηση
     document.getElementById('choices').style.display = 'none'; // Κρύψε τις επιλογές
     document.getElementById('submit').style.display = 'none'; // Κρύψε το κουμπί για υποβολή απάντησης
