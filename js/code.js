@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', (event) => { // Κατα το αν
     if (hours < 12) { // Αν η ώρα είναι μικρότερη από 12
         greeting = 'Καλημέρα'; // Εμφάνισε το καλημέρα
     } else {
-        greeting = 'Καληνύχτα'; // Αλλιώς εμφάνισε το καληνύχτα
+        greeting = 'Καλησπέρα'; // Αλλιώς εμφάνισε το καληνύχτα
     }
 
     const welcomeMessage = `${greeting}! Σήμερα είναι ${currentDate.toLocaleDateString()}. Καλώς ήρθατε στον ιστότοπό μας. Εδώ θα βρείτε πληροφορίες για την Hip-Hop κουλτούρα.`; // Το μήνυμα καλωσορίσματος
