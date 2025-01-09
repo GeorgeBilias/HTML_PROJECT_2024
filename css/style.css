@@ -1,4 +1,6 @@
 /* Main html CSS */
+
+/* Initializing Body and Main */
 body{
     display: flex; 
     margin: 0; 
@@ -18,12 +20,18 @@ main{
     width: 100%;
     justify-content: space-between;
 }
+/* Adding a Custom Font */
+@font-face {
+    font-family: 'Hip-Hop-Font';
+    src: url(../font/Bastrad-Regular.otf);
+}
+/* Header CSS */
 header {
     background-color: black; 
     color: #fff;
     padding: 10px;
-    text-align: center; 
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Hip-Hop-Font';
+    font-size: large;
 }
 .header-content {
     display: flex;
@@ -33,11 +41,10 @@ header {
 .header-content img {
     margin-right: 10px; 
 }
+/* Navigation Bar CSS */
 #nav-bar {
     background-color: black; 
-    display: flex;
     justify-content: center; 
-    flex-wrap: wrap;
 }
 #nav-bar ul {
     list-style-type: none; 
@@ -66,16 +73,43 @@ header {
 #nav-bar ul li a.active {
     color: #333; 
 }
+/* Main Content CSS */
+#content{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0; 
+    padding: 0; 
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+#content h1 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    text-decoration: underline;
+}
+#content h2 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline;
+}
 #content #artists-img {
     border-radius: 20px;
+}
+#content p{
+    width: 80%; 
+}
+.video-container {
+    align-items: center;
+    display: flex; 
+    justify-content: center; 
 }
 #content iframe {
     border-radius: 20px; 
     border: black 2px solid;
 }
-#content p{
-    width: 80%; 
-}
+/* Artists CSS */
 #artists-container {
     display: flex; 
     flex-wrap: wrap; 
@@ -119,18 +153,7 @@ header {
     height: 100px; 
     margin-bottom: 10px; 
 }
-#content{
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    margin: 0; 
-    padding: 0; 
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    margin-bottom: 2%;
-}
+/* Footer CSS */
 footer {
     background-color: #333;
     color: #fff; 
@@ -139,11 +162,7 @@ footer {
     bottom: 0; 
     width: 100%; 
 }
-.video-container {
-    align-items: center;
-    display: flex; 
-    justify-content: center; 
-}
+/* Contact CSS */
 #contact {
     width: 100%; 
     border-collapse: collapse; 
@@ -168,6 +187,7 @@ footer {
     color: black; 
     text-decoration: underline; 
 }
+/* Albums CSS */
 #albums {
     width: 90%; 
     border-radius: 20px; 
@@ -207,6 +227,7 @@ footer {
 #buy-albums li {
     list-style: none;
 }
+/* Shop CSS */
 #shop-container {
     display: flex;
     flex-wrap: wrap;
@@ -283,6 +304,7 @@ footer {
     color: gray;
     text-decoration: underline;
 }
+/* Shoe Site CSS */
 .slides {
     display: flex;
     overflow: hidden;
@@ -337,32 +359,6 @@ footer {
 .pic-table td {
     border: 2px solid #333;
 }
-.sources {
-    background-color: #f9f9f9; 
-    border: 2px solid black;    
-    border-radius: 10px; 
-    padding: 20px; 
-    margin: 20px auto; 
-    width: 80%; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    text-align: center; 
-}
-.sources ul {
-    list-style-type: none; 
-    padding: 0; 
-}
-.sources li {
-    margin: 10px 0;
-}
-.sources a {
-    text-decoration: none; 
-    color: black; 
-    font-weight: bold; 
-}
-.sources a:hover {
-    text-decoration: underline; 
-    color: #333; 
-}
 .purchase-links {
     text-align: center;
 }
@@ -397,6 +393,33 @@ footer {
     padding: 0;
     text-align: center;
     width: 100%;
+}
+/* Sources CSS */
+.sources {
+    background-color: #f9f9f9; 
+    border: 2px solid black;    
+    border-radius: 10px; 
+    padding: 20px; 
+    margin: 20px auto; 
+    width: 80%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+}
+.sources ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+.sources li {
+    margin: 10px 0;
+}
+.sources a {
+    text-decoration: none; 
+    color: black; 
+    font-weight: bold; 
+}
+.sources a:hover {
+    text-decoration: underline; 
+    color: #333; 
 }
 /* Responsive design */
 @media (max-width: 700px) {
@@ -477,22 +500,17 @@ footer {
     border-radius: 12px; 
     transition: background-color 0.3s ease; 
 }
-#start-quiz {
-    background-color: #333; 
-    border: none; 
-    color: white; 
-    padding: 15px 32px; 
-    text-align: center; 
-    text-decoration: none; 
-    display: inline-block; 
-    margin: 4px 2px; 
-    cursor: pointer; 
-    border-radius: 12px; 
-    transition: background-color 0.3s ease; 
-}
 #quiz-img {
     border-radius: 20px;
     width: 30%;
+}
+#startQuiz{
+    background-color: #333;
+    border: 1px solid black;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 10px;
 }
 #userNameInput {
     background-color: white;
@@ -531,6 +549,23 @@ footer {
     font-size: larger;
     font-weight: bold;
 }
+#choices{
+    margin-left: 2%;
+    gap: 10px;
+    margin-top: 2%;
+    text-align: left;
+
+}
+.choice{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.choice input{
+    cursor: pointer;
+}
 #submit-button{
     background-color: #333;
     border: 1px solid black;
@@ -549,29 +584,4 @@ footer {
 }
 #submitName:hover,#startQuiz:hover,#submit-button:hover,#start-quiz:hover,.bg-change-btn:hover,.contact-email:hover {
     background-color: #575757;
-}
-#startQuiz{
-    background-color: #333;
-    border: 1px solid black;
-    color: white;
-    border-radius: 15px;
-    cursor: pointer;
-    padding: 10px;
-}
-#choices{
-    margin-left: 2%;
-    gap: 10px;
-    margin-top: 2%;
-    text-align: left;
-
-}
-.choice{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.choice input{
-    cursor: pointer;
 }
