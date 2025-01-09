@@ -1,2 +1,0 @@
-fix overrides in css and remove unnecessary stuff + perhaps add some stuff and write more to the html
-add more notes to the css
