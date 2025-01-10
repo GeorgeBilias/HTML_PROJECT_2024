@@ -68,10 +68,16 @@ header {
 }
 #nav-bar ul li a:hover {
     background-color: #575757; 
+    color: #000;
     border-radius: 4px; 
 }
 #nav-bar ul li a.active {
-    color: #333; 
+    color: #575757;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+#nav-bar ul li a.active:hover {
+    color: #000;
 }
 /* Main Content CSS */
 #content{
