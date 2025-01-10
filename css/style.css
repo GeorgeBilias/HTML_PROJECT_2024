@@ -390,7 +390,6 @@ footer {
 }
 .purchase-links-list li a:hover {
     text-decoration: underline;
-    color: #575757;
 }
 .purchase-links-list .warranty {
     order: 1;
